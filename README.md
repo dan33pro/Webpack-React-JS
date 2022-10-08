@@ -214,3 +214,145 @@ dependencias.
     ```
 
 5. Corremos con `npm run start`
+
+
+## Optimización de Webpack para React
+
+1. Insatlamos las dependencias
+
+    ```npm
+    npm install css-minimizer-webpack-plugin terser-webpack-plugin -D
+    ```
+
+2. Creamos un archivo `webpack.config.dev.js` con lo mismo que el [webpack.config.js](https://github.com/dan33pro/Webpack-React-JS/blob/main/webpack.config.js)
+pero le agregamos la linea 
+
+    ```js
+    mode: 'development',
+    ```
+
+    Y en webpack.config.js](https://github.com/dan33pro/Webpack-React-JS/blob/main/webpack.config.js) dejamos
+
+    ```js
+    mode: 'production',
+    ```
+
+3. Ahora en nuestro archivo [webpack.config.js](https://github.com/dan33pro/Webpack-React-JS/blob/main/webpack.config.js) vamos a quitar la propiedad `devServer` que no va a producción y agregamos en la propiedad `output` dentro `clean: true,`
+
+4. Agregamos las constantes siguientes en este mismo archivo
+
+    ```js
+    const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+    const TerserWebpackPlugin = require('terser-webpack-plugin');
+    ```
+
+    También los alías para los `path` dentro de la propiedad `resolve` en ambos archvos de configuración
+
+    ```js
+    alias: {
+        '@components': path.resolve(__dirname, 'src/components/'),
+        '@styles': path.resolve(__dirname, 'src/styles/'),
+    },
+    ```
+
+5. En [webpack.config.js](https://github.com/dan33pro/Webpack-React-JS/blob/main/webpack.config.js) agregamos debajo de `plugins`
+
+    ```js
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new CssMinimizerPlugin(),
+            new TerserWebpackPlugin(),
+        ],
+    },
+    ```
+
+6. Modificamos los scripts en el [package.json](https://github.com/dan33pro/Webpack-React-JS/blob/main/package.json)
+
+    ```json
+    "start": "webpack serve --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack --config webpack.config.js"
+    ```
+
+## De React 17 a React 18
+
+`ReactDom.render` ya no es compatible con `React 18` en su lugar en el archivo `index.js` ponemos
+
+    ```js
+    import React from "react";
+    import { createRoot } from "react-dom/client";
+    import App from './components/App';
+    import './styles/global.scss';
+
+    const container = document.getElementById('app');
+    const root = createRoot(container);
+    root.render(<App tab="home" />);
+    ```
+
+## Adicionales no necesarios
+
+Voy añadir un poco más de estilos, porque quiero jeje, solo modifique un poco el Dom en el archivo `App.jsx`
+
+    ```jsx
+    import React from "react";
+
+    const title = <h1>Hola react!!!</h1>
+    const text = <span>Nunca he trabajado con React, solo estoy haciendo experimentos, espero 
+        pronto poder hacer el curso de React.js</span>;
+
+    const App = () => <div className="container">{title}{text}</div>;
+ 
+    export default App;
+    ```
+
+Y en el archivo [global.scss](https://github.com/dan33pro/Webpack-React-JS/blob/main/src/styles/global.scss) voy a agregar
+
+    ```scss
+    $base-color: #b99ba9;
+    $shadow-dark: #746e71;
+    $shadow-light: #eee1e7;
+    $contrast-clor: #FFFFFF;
+    $color: rgba(black, 0.88);
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $base-color;
+        color: $color;
+    }
+
+    #app {
+        width: 600px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px 60px;
+        background-color: $contrast-clor;
+        border-radius: 20px;
+        box-shadow: 10px 10px 15px rgba($shadow-dark, 0.5),
+                    5px 5px 10px rgba($shadow-dark, 0.75),
+                    -10px -10px 15px rgba($shadow-light, 0.5);
+    }
+    
+    h1 {
+        text-align: center;
+        padding: 10px 5px;
+    }
+    ```
+
+
+## Deploy del proyecto con React.js
+
+El ultimo paso es el despliegue, para esto usamos
+

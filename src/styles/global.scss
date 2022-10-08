@@ -1,7 +1,41 @@
-$base-color: #c6538c;
+$base-color: #b99ba9;
+$shadow-dark: #746e71;
+$shadow-light: #eee1e7;
+$contrast-clor: #FFFFFF;
 $color: rgba(black, 0.88);
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: $base-color;
     color: $color;
 }
+
+#app {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 60px;
+    background-color: $contrast-clor;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px rgba($shadow-dark, 0.5),
+                5px 5px 10px rgba($shadow-dark, 0.75),
+                -10px -10px 15px rgba($shadow-light, 0.5);
+}
+
+h1 {
+    text-align: center;
+    padding: 10px 5px;
+}
+
