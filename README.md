@@ -344,7 +344,7 @@ Y en el archivo [global.scss](https://github.com/dan33pro/Webpack-React-JS/blob/
                     5px 5px 10px rgba($shadow-dark, 0.75),
                     -10px -10px 15px rgba($shadow-light, 0.5);
     }
-    
+
     h1 {
         text-align: center;
         padding: 10px 5px;
@@ -354,5 +354,5 @@ Y en el archivo [global.scss](https://github.com/dan33pro/Webpack-React-JS/blob/
 
 ## Deploy del proyecto con React.js
 
-El ultimo paso es el despliegue, para esto usamos
+El ultimo paso es el despliegue, para esto usamos `Netlify`
 
