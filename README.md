@@ -81,7 +81,7 @@ Esta es la continuación de esta saga de 3 repos en los que venimos trabajando c
     npm install webpack webpack-cli webpack-dev-server -D
     ```
 
-4. Creamos nuestro archivo de configuración [webpack.config.js]()
+4. Creamos nuestro archivo de configuración [webpack.config.js](https://github.com/dan33pro/Webpack-React-JS/blob/main/webpack.config.js)
 
     ```js
     const path = require('path');
