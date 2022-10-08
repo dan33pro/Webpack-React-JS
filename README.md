@@ -122,7 +122,7 @@ Esta es la continuación de esta saga de 3 repos en los que venimos trabajando c
     npm install html-loader html-webpack-plugin -D
     ```
 
-2. En el archivo [webpack.config.js]() añadimos
+2. En el archivo [webpack.config.js](https://github.com/dan33pro/Webpack-React-JS/blob/main/webpack.config.js) añadimos
 
     ```js
     const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -149,7 +149,7 @@ Esta es la continuación de esta saga de 3 repos en los que venimos trabajando c
         }),
     ],
     ```
-3. Agregamos los scripts necesarios en el [package.json]()
+3. Agregamos los scripts necesarios en el [package.json](https://github.com/dan33pro/Webpack-React-JS/blob/main/package.json)
 
     ```json
     "start": "webpack serve",
@@ -167,7 +167,7 @@ Esta es la continuación de esta saga de 3 repos en los que venimos trabajando c
     npm install mini-css-extract-plugin css-loader style-loader sass sass-loader -D
     ```
 
-2. En nuestro archivo de [webpack.config.js]() añadimos la configuración para estas
+2. En nuestro archivo de [webpack.config.js](https://github.com/dan33pro/Webpack-React-JS/blob/main/webpack.config.js) añadimos la configuración para estas
 dependencias.
 
     ```js
@@ -195,7 +195,7 @@ dependencias.
     }),
     ```
 
-3. Ya con esto podemos probar el resultado ceando un archivo [global.scss]() con
+3. Ya con esto podemos probar el resultado ceando un archivo [global.scss](https://github.com/dan33pro/Webpack-React-JS/blob/main/src/styles/global.scss) con
 
     ```scss
     $base-color: #c6538c;
@@ -207,7 +207,7 @@ dependencias.
     }
     ```
 
-4. Lo mportamos en el [index.js]() 
+4. Lo mportamos en el [index.js](https://github.com/dan33pro/Webpack-React-JS/blob/main/src/index.js) 
 
     ```js
     import './styles/global.scss';
