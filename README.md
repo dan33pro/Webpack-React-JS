@@ -354,5 +354,5 @@ Y en el archivo [global.scss](https://github.com/dan33pro/Webpack-React-JS/blob/
 
 ## Deploy del proyecto con React.js
 
-El ultimo paso es el despliegue, para esto usamos `Netlify`
+El ultimo paso es el despliegue, para esto usamos `Netlify`, el [resultado](https://63419a31a145c458bdad3acf--remarkable-kitsune-64db81.netlify.app/).
 
