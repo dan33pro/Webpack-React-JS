@@ -1,6 +1,16 @@
 # Integración básica de React.js
 Esta es la continuación de esta saga de 3 repos en los que venimos trabajando con Webpack
 
+**Indice**
+1. [Instalación y configuración de React.js](#instalación-y-configuración-de-reactjs)
+2. [Configuración de Webpack 5 para React.js](#configuración-de-webpack-5-para-reactjs)
+3. [Configuración de plugins y loaders para React](#configuración-de-plugins-y-loaders-para-react)
+4. [Configuración de Webpack para CSS en React](#configuración-de-webpack-para-css-en-react)
+5. [Optimización de Webpack para React](#optimización-de-webpack-para-react)
+6. [De React 17 a React 18](#de-react-17-a-react-18)
+7. [Adicionales no necesarios](#adicionales-no-necesarios)
+8. [Deploy del proyecto con React.js](#deploy-del-proyecto-con-reactjs)
+
 ## Instalación y configuración de React.js
 
 1. Para comenzar lo primero es instalar las dependecias de react con
