@@ -1,7 +1,7 @@
 # Integración básica de React.js
 Esta es la continuación de esta saga de 3 repos en los que venimos trabajando con Webpack
 
-**Indice**
+## Indice
 1. [Instalación y configuración de React.js](#instalación-y-configuración-de-reactjs)
 2. [Configuración de Webpack 5 para React.js](#configuración-de-webpack-5-para-reactjs)
 3. [Configuración de plugins y loaders para React](#configuración-de-plugins-y-loaders-para-react)
